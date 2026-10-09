@@ -1,0 +1,9 @@
+# Routes checked by scripts/route-check (expects 2xx on a seeded database)
+/
+/projects
+/projects?status=at_risk
+/projects/new
+/projects/1
+/board
+/team
+/login

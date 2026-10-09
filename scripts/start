@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Install, migrate, seed, then serve the app on :3000 — the same steps the
+# Lightsprint preview runs. Needs DATABASE_URL and AUTH_SECRET in the env.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+bun install --frozen-lockfile
+bun run db:migrate
+bun run db:seed
+exec bun run dev

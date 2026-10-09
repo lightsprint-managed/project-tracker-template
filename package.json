@@ -1,0 +1,53 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "//build": "DISABLED in template — a production build overwrites the .next served by the live dev server and takes the preview down. Use `bun run typecheck` to validate. Re-enable for CI/deploys with: next build",
+    "build": "echo 'bun run build is disabled in this template (it breaks the live preview). Use bun run typecheck. See CLAUDE.md.' && exit 1",
+    "//start": "DISABLED in template — production server; the preview runs `bun run dev`. Re-enable for deploys with: next start",
+    "start": "echo 'bun run start is disabled in this template. Use bun run dev. See CLAUDE.md.' && exit 1",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "npx tsx db/migrate.ts",
+    "db:seed": "npx tsx db/seed.ts",
+    "db:setup": "npm run db:migrate && npm run db:seed"
+  },
+  "dependencies": {
+    "@radix-ui/react-dropdown-menu": "^2.1.4",
+    "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "@types/bcryptjs": "^3.0.0",
+    "@types/node": "20.17.6",
+    "@types/react": "19.0.0",
+    "@types/react-dom": "19.0.0",
+    "autoprefixer": "^10.4.20",
+    "bcryptjs": "^3.0.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "dotenv": "^16.4.7",
+    "drizzle-kit": "^0.22.8",
+    "drizzle-orm": "^0.31.4",
+    "drizzle-zod": "^0.5.1",
+    "lucide-react": "^0.400.0",
+    "next": "^15.1.9",
+    "next-auth": "5.0.0-beta.25",
+    "postcss": "^8.4.49",
+    "postgres": "^3.4.9",
+    "prettier": "^3.4.2",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "server-only": "^0.0.1",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7",
+    "tsx": "^4.19.0",
+    "typescript": "5.7.2",
+    "zod": "^3.24.1"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none"
+  }
+}
